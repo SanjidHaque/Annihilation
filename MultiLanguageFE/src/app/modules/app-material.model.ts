@@ -3,16 +3,19 @@ import {CommonModule} from '@angular/common';
 import {MAT_DIALOG_DEFAULT_OPTIONS} from '@angular/material';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
   imports: [
     CommonModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule
   ],
   exports: [
     MatMenuModule,
+    MatExpansionModule,
     MatButtonModule
   ],
 

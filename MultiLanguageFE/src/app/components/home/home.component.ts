@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NewsApiService} from 'angular-news-api';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private newsApiService: NewsApiService) {}
   ngOnInit() {
+
+    this.topHeadlines();
+
   }
+  topHeadlines() {
+    this.newsApiService.topHeadlines({
+      sources: 'bbc-news'
+    }).subscribe(data => console.log(data));
+  }
+
+
+
 
 }
