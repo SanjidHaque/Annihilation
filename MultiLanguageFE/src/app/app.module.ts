@@ -12,11 +12,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import { NgnewsModule } from 'angular-news-api';
 import { NewsApiKeyConfig } from 'angular-news-api';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 const newsApiConfig: NewsApiKeyConfig = {
   key: '1a9c3ffc5fd84e99a02bae4573b28cd9'
 };
-
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +36,15 @@ const newsApiConfig: NewsApiKeyConfig = {
     BrowserAnimationsModule,
     AppRoutingModule,
     AppMaterialModule,
-    NgnewsModule.forRoot(newsApiConfig)
+    NgnewsModule.forRoot(newsApiConfig),
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

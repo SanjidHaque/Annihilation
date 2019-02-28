@@ -4,14 +4,14 @@
   <div class="col-xl-2"
        style="font-size: 34px; font-family: 'Nova Flat', cursive;">
 
-   Annihilation
+   {{ 'Header.Annihilation' | translate }}
 
   </div>
 
   <div class="col-xl-1 text-xl-right" style="padding-top: 10px;
        cursor: pointer;
        font-size: 110%;">
-    Home
+    {{ 'Header.Home' | translate }}
   </div>
 
   <div class="col-xl-2 text-xl-center"
@@ -20,13 +20,16 @@
        font-size: 110%;"
        [matMenuTriggerFor]="visaServices">
 
-    Visa services
+    {{ 'Header.VisaServices' | translate }}
 
     <mat-menu class="remove-padding" #visaServices="matMenu">
-      <button mat-menu-item>F1 visa</button>
-      <button mat-menu-item>B1/B2 visa</button>
-      <button mat-menu-item>Passport renewal</button>
-      <button mat-menu-item>US citizen naturalization</button>
+      <button
+        style="outline: 0;"
+        mat-menu-item>F1 visa</button>
+      <button
+        style="outline: 0;" mat-menu-item>B1/B2 visa</button>
+      <button style="outline: 0;" mat-menu-item>Passport renewal</button>
+      <button style="outline: 0;" mat-menu-item>US citizen naturalization</button>
     </mat-menu>
 
   </div>
@@ -36,22 +39,22 @@
        cursor: pointer;
        font-size: 110%;"
        [mat-menu-trigger-for]="registeredAgentServices">
-    Registered agent services
+   {{ 'Header.RegisteredAgentServices' | translate }}
 
 
     <mat-menu #registeredAgentServices="matMenu">
-      <button mat-menu-item>Basic service</button>
-      <button mat-menu-item>Full package service</button>
-      <button mat-menu-item [mat-menu-trigger-for]="startingABusiness" >Starting a business</button>
+      <button style="outline: 0;" mat-menu-item>Basic service</button>
+      <button style="outline: 0;" mat-menu-item>Full package service</button>
+      <button style="outline: 0;" mat-menu-item [mat-menu-trigger-for]="startingABusiness" >Starting a business</button>
     </mat-menu>
 
     <mat-menu #startingABusiness>
-      <button mat-menu-item>Sole proprietorship</button>
-      <button mat-menu-item>Partnership</button>
-      <button mat-menu-item>LLC/PLC/LC</button>
-      <button mat-menu-item>Corporation</button>
-      <button mat-menu-item>EIN</button>
-      <button mat-menu-item>ITIN</button>
+      <button style="outline: 0;" mat-menu-item>Sole proprietorship</button>
+      <button style="outline: 0;" mat-menu-item>Partnership</button>
+      <button style="outline: 0;" mat-menu-item>LLC/PLC/LC</button>
+      <button style="outline: 0;" mat-menu-item>Corporation</button>
+      <button style="outline: 0;" mat-menu-item>EIN</button>
+      <button style="outline: 0;" mat-menu-item>ITIN</button>
     </mat-menu>
 
   </div>
@@ -61,21 +64,21 @@
      style="padding-top: 10px;
        cursor: pointer;
        font-size: 100%;">
-   Contact us
+   {{ 'Header.ContactUs' | translate }}
 </div>
 
   <div class="col-xl-1 text-xl-center"
        style="padding-top: 10px;
        cursor: pointer;
        font-size: 100%;">
-    Login
+    {{ 'Header.Login' | translate }}
   </div>
 
   <div class="col-xl-1"
        style="padding-top: 10px;
        cursor: pointer;
        font-size: 100%;">
-    Register
+    {{ 'Header.Register' | translate }}
   </div>
 
 </div>

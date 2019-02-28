@@ -1,0 +1,11 @@
+{
+  "Header": {
+    "Annihilation": "Annihilation",
+    "Home" : "Home",
+    "VisaServices" : "Visa services",
+    "RegisteredAgentServices" : "Registered agent services",
+    "ContactUs" : "Contact us",
+    "Login" : "Login",
+    "Register" : "Register"
+  }
+}

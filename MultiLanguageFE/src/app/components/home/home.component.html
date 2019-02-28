@@ -1,3 +1,32 @@
+<div class="row">
+  <div class="col-xl-12 text-xl-right">
+
+    <button
+      title="Translate into English"
+      style="
+      border: none;
+      min-width: 10px;
+      outline: 0"
+      mat-stroked-button (click)="switchLanguage('en')">
+      <span style="" class="flag-icon flag-icon-us"></span></button>
+
+    <button
+      title="Translate into Vietnamese"
+      style="
+      border: none;
+      min-width: 10px;
+      outline: 0"
+      mat-stroked-button (click)="switchLanguage('vi')">
+      <span style="" class="flag-icon flag-icon-vn"></span>
+    </button>
+
+
+  </div>
+</div>
+
+
+
+
 <div class="row" style="padding-bottom: 200px;">
   <div class="col-xl-3">
 
@@ -121,12 +150,15 @@
   </div>
 
 
+  <div class="col-xl-7">
+    <router-outlet></router-outlet>
+  </div>
 
-  <div class="offset-xl-7 col-xl-2">
+
+  <div class="col-xl-2">
 
     <div class="row">
       <div class="col-xl-12">
-
 
 
       </div>
